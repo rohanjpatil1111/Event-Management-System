@@ -1,0 +1,196 @@
+<div class="login-page">
+  <mat-card class="mat-elevation-z12">
+    <mat-card-title style="text-align:center; margin-top: 20px;">SignIn-Up</mat-card-title>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+      <mat-tab label="Sign In">
+          <mat-card-content>
+            <form action="">
+              <mat-form-field>
+                <input
+                  matInput
+                  required
+                  placeholder="Email"
+                  name="email"
+                  [(ngModel)]="email"
+               
+              > 
+                <mat-icon matSuffix>email</mat-icon>
+              </mat-form-field>
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder="Password"
+                  type="password"
+                  required
+                  minlength="6"
+                  name="password"
+                  [(ngModel)]="password"
+                  >
+                <mat-icon matSuffix>lock</mat-icon>
+              </mat-form-field>
+    
+              <button
+              (click)=getAccess()
+                mat-raised-button
+                color="primary"
+                class="login-button">
+                Sign In
+              </button>
+
+            </form >
+          </mat-card-content>
+      </mat-tab>
+      <mat-tab label="Sign Up">
+        <mat-card-content>
+          <form #custRegister="ngForm" (ngSubmit)="addData(custRegister)">
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="First Name"
+                required
+                name="firstName"
+                ngModel
+               >
+               <mat-icon matSuffix>perm_identity</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Last Name"
+                required
+                name="lastName"
+                ngModel
+                #username="ngModel">
+              <mat-icon matSuffix>perm_identity</mat-icon>
+              
+
+            </mat-form-field>
+        
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Contact Number"
+                required
+                name="contactNo"
+                ngModel
+              >
+              <mat-icon matSuffix>perm_identity</mat-icon>
+             
+
+            </mat-form-field>
+
+
+
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Email"
+                required
+                name="email"
+                ngModel
+              >
+              
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+
+            <mat-form-field>
+              <input
+                matInput
+                placeholder="Password"
+                type="password"
+                required
+                minlength="6"
+                name="password"
+                ngModel
+                >
+                
+              <mat-icon matSuffix>lock</mat-icon>
+
+            </mat-form-field>
+            <input class="signup" type="submit" value="Register">
+          </form>
+        </mat-card-content>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+<div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="backk">
+<div class="container">
+  <input type="checkbox" id="check">
+  <div class="login form" style="height: 350px;">
+  
+    <header  style="color: black; font-family: tahoma;">Login</header>
+    
+    
+    <br>
+      <input name="email" type="text" placeholder="Enter your email" [(ngModel)]="email" >
+      <input name="password" ngModel type="password" placeholder="Enter your password" [(ngModel)]="password">
+      <br>
+<br>
+      <div class="rk">
+      <button class="button" (click)=getAccess()>Login</button>
+  </div>
+    
+<br>
+      <div class="signup">
+        <span class="signup" style="color: black;">Don't have an account?
+         <label for="check">Signup</label>
+        </span>
+      </div>
+  </div>
+  <div  class="registration form">
+    <header style="color: black;">Signup</header>
+    <form #custRegister="ngForm" (ngSubmit)="addData(custRegister)">
+
+      <input name="firstName"  type="text" placeholder="Frist name" ngModel>
+     
+      <input name="lastName"  type="text" placeholder=" Last name" ngModel>
+      <input name="contactNo"  type="number" placeholder="Contact Number" ngModel>
+      <input name="email"  type="text" placeholder="Enter your Email" ngModel>
+
+      <input name="password" type="password" placeholder="Create a password" ngModel >
+
+
+      <input class="signup" type="submit" value="Register">
+      
+    </form>
+    <div style="color: black;" class="signup">
+      <span class="signup">Already have an account?
+       
+       <label for="check">Login</label>
+      </span>
+    </div>
+  </div>
+</div> -->
